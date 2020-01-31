@@ -10,7 +10,6 @@
       <form method='post'>
     <input type='text' name='word' placeholder="Enter word">
     </form>
-    {{ error }}
     {% if meaning != None %}
     <p class='word'>{{ word }}</p>
     {% for key in meaning.keys() %}
