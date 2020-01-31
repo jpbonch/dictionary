@@ -4,8 +4,6 @@ from PyDictionary import PyDictionary
 app = Flask(__name__)
 dictionary=PyDictionary()
 
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     word = 'dictionary'

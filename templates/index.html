@@ -10,13 +10,17 @@
       <form method='post'>
     <input type='text' name='word' placeholder="Enter word">
     </form>
+    {{ error }}
+    {% if meaning != None %}
     <p class='word'>{{ word }}</p>
     {% for key in meaning.keys() %}
     <p>{{ key }}: {{ '; '.join(meaning[key]) }}</p>
     {% endfor %}
     <p class='lesser'>Synonyms: {{ synonyms }}</p>
     <p class='lesser'>Antonyms: {{ antonyms }}</p>
-
+    {% else %}
+    <p>Word not found</p>
+    {% endif %}
     </div>
   </body>
 </html>
