@@ -9,9 +9,8 @@ body{
 }
 
 .content{
-  position: absolute;
-  top: 15%;
-  left: 22%;
+  margin: 0 auto;
+  margin-top: 5%;
   border-width: thin;
   border-color: rgb(198, 198, 198);
   border-style: solid;
