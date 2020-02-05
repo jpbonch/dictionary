@@ -4,11 +4,10 @@ from PyDictionary import PyDictionary
 app = Flask(__name__)
 dictionary=PyDictionary()
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
     word = 'dictionary'
-    if request.method == 'POST':
-        word = request.form.get('word', 'dictionary')
+    word = request.args.get('word', 'dictionary')
 
     try:
         meaning = dictionary.meaning(word)
