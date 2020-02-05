@@ -15,8 +15,6 @@
     {% for key in meaning.keys() %}
     <p>{{ key }}: {{ '; '.join(meaning[key]) }}</p>
     {% endfor %}
-    <p class='lesser'>Synonyms: {{ synonyms }}</p>
-    <p class='lesser'>Antonyms: {{ antonyms }}</p>
     {% else %}
     <p>Word not found</p>
     {% endif %}

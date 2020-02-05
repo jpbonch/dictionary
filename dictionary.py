@@ -12,14 +12,10 @@ def index():
 
     try:
         meaning = dictionary.meaning(word)
-        synonyms = dictionary.synonym(word)
-        antonyms = dictionary.antonym(word)
     except:
         meaning = dictionary.meaning('dictionary')
-        synonyms = dictionary.synonym('dictionary')
-        antonyms = dictionary.antonym('dictionary')
 
-    return render_template('index.html', word=word, meaning=meaning, synonyms=synonyms, antonyms=antonyms)
+    return render_template('index.html', word=word, meaning=meaning)
 
 if __name__ == '__main__':
 	app.run()
